@@ -30,9 +30,6 @@ def page_not_found(e):
 
 
 ####################
-
-
-
 class SoilFeature(ndb.Model):
     """Models a Soil Feature."""
     soil = ndb.StringProperty(required=True)
