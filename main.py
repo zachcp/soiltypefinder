@@ -38,5 +38,5 @@ class SoilFeature(ndb.Model):
     minlat = ndb.FloatProperty(required=True)
     maxlon = ndb.FloatProperty(required=True)
     minlon = ndb.FloatProperty(required=True)
-    polygon = ndb.listProperty(value=GeoPt)
+    polygon = ndb.GeoPtProperty(repeated=True)
 

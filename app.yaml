@@ -14,8 +14,13 @@ threadsafe: yes
 
 # Handlers define how to route requests to your application.
 handlers:
-  builtins:
-    - remote_api: on
+
+- url: /remoteapi.*
+  script: google.appengine.ext.remote_api.handler.application
+  login: admin
+
+- builtins:
+  - remote_api: on
 
 # App Engine serves and caches static files contained in the listed directories
 # (and subdirectories). Uncomment and set the directory as needed.
