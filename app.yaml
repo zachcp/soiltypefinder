@@ -15,13 +15,6 @@ threadsafe: yes
 # Handlers define how to route requests to your application.
 handlers:
 
-- url: /remoteapi.*
-  script: google.appengine.ext.remote_api.handler.application
-  login: admin
-
-- builtins:
-  - remote_api: on
-
 # App Engine serves and caches static files contained in the listed directories
 # (and subdirectories). Uncomment and set the directory as needed.
 #- url: /client
@@ -33,6 +26,8 @@ handlers:
 - url: .*  # This regex directs all routes to main.app
   script: main.app
 
+builtins:
+- remote_api: on
 # Third party libraries that are included in the App Engine SDK must be listed
 # here if you want to use them.  See
 # https://developers.google.com/appengine/docs/python/tools/libraries27 for
@@ -42,4 +37,6 @@ handlers:
 # TODO: List any other App Engine SDK libs you may need here.
 #libraries:
 #- name: jinja2
+#  version: latest
+#- name: flask
 #  version: latest
