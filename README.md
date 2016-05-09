@@ -1,3 +1,9 @@
+# Soiltypefinder
+
+An early stab at trying to make a RESTful api to determing Soil types from a Lat/long data using GAE. As it turns out, matching up GEOJSOn data for point-in-polygon calculations is not so easy. It will need a bounding box approach and possibly a migration to a more suitable database (i.e. PostGres). The hope was to make somethign quick and easy and for now I am going to abandon the webinterface. However, the data is still good and can be used to visualize the US and FAO datasets.
+
+
+
 ## Python Flask Skeleton for Google App Engine
 
 A skeleton for building Python applications on Google App Engine with the
